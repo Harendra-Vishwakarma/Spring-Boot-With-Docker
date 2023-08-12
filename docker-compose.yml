@@ -1,0 +1,26 @@
+version: '3'
+services:
+  spring-app:
+    container_name: spring-app
+    #restart: always mean first start the spring app and then start mysql but it gives mysql connection fail then now restart, it will be connected
+    restart: always  
+    build: .
+    ports:  
+     - 8000:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/studentdocker
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    
+
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:latest
+    ports: 
+     - 3306:3306
+    environment: 
+     MYSQL_ROOT_PASSWORD: root 
+     MYSQL_DATABASE: studentdocker
+     
+    volumes:
+     - "C:/Users/hargk/Desktop/volumns:/var/lib/mysql"
