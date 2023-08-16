@@ -13,6 +13,8 @@ services:
       SPRING_DATASOURCE_PASSWORD: root
     depends_on: 
       - mysqldb
+    volumes:
+     - C:\Users\hargk\Desktop\volumns:/var/lib/mysql
     
 
   mysqldb:
