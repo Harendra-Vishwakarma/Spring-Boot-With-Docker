@@ -14,7 +14,7 @@ services:
     depends_on: 
       - mysqldb
     volumes:
-     - C:\Users\hargk\Desktop\volumns:/var/lib/mysql
+     - /home/ubuntu/volumns:/var/lib/mysql
     
 
   mysqldb:
