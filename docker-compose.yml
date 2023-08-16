@@ -1,7 +1,7 @@
 version: '3'
 services:
   spring-app:
-    container_name: spring-app
+    #container_name: spring-app
     #restart: always mean first start the spring app and then start mysql but it gives mysql connection fail then now restart, it will be connected
     restart: always  
     build: .
@@ -14,7 +14,7 @@ services:
     
 
   mysqldb:
-    container_name: mysqldb
+    #container_name: mysqldb
     image: mysql:latest
     ports: 
      - 3306:3306
