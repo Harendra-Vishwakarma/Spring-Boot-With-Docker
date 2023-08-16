@@ -8,7 +8,7 @@ services:
     ports:  
      - 8081:8081
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3307/studentdocker
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/studentdocker
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
     
@@ -17,7 +17,7 @@ services:
     #container_name: mysqldb
     image: mysql:latest
     ports: 
-     - 3307:3306
+     - 3306:3306
     environment: 
      MYSQL_ROOT_PASSWORD: root 
      MYSQL_DATABASE: studentdocker
