@@ -21,6 +21,3 @@ services:
     environment: 
      MYSQL_ROOT_PASSWORD: root 
      MYSQL_DATABASE: studentdocker
-     
-    volumes:
-     - "C:/Users/hargk/Desktop/volumns:/var/lib/mysql"
