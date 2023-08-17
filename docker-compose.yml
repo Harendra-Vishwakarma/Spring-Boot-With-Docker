@@ -4,7 +4,8 @@ services:
     #container_name: spring-app
     #restart: always mean first start the spring app and then start mysql but it gives mysql connection fail then now restart, it will be connected
     restart: always  
-    build: .
+    #build: .
+    image: harendravishwakarma/springapp:latest
     ports:  
      - 8081:8080
     environment:
